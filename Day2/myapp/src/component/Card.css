@@ -1,0 +1,16 @@
+.Card-container{
+
+    border: solid black 2px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: #F26B0F;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+#user-img{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+}
