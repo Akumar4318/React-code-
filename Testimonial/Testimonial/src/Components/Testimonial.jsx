@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import Card from "./Card"
 import { FaQuoteLeft } from "react-icons/fa";
 import { FaQuoteRight } from "react-icons/fa";
@@ -8,6 +9,7 @@ import { FiChevronRight } from "react-icons/fi";
 
 const Testimonial = (props) => {
 
+    // eslint-disable-next-line react/prop-types
     let reviews=props.reviews
   return (
     <div>
@@ -19,7 +21,7 @@ const Testimonial = (props) => {
       <div className="items-center mx-auto "><FaQuoteLeft className="text-violet-400" /></div>
 
           <div className="text-center mt-4 text-slate-500 ">
-            {review.text}
+            {reviews.text}
           </div>
 
           <div  className="items-center mx-auto "> <button><FaQuoteRight  className="text-violet-400"/></button> </div>
