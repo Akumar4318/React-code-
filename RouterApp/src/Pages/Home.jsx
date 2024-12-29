@@ -2,7 +2,7 @@
 
 const Home = () => {
   return (
-    <div className="flex  justify-center items-center h-lvh">Home</div>
+    <div className="flex  justify-center items-center h-full text-3xl text-white">Home</div>
   )
 }
 

@@ -16,7 +16,7 @@ const App = () => {
   const[isLoggedIn,setIsLoggedIn] = useState(false)
 
   return (
-  <div>
+  <div className='w-screen h-screen bg-richblack-900'>
 
     <Navbar isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}></Navbar>
   
