@@ -14,10 +14,16 @@ export default function AppContextProvider({ children }){
 
     //Data filling 
 
-    async function getalldata(page=1) {
+    async function getalldata(page=1,tag=null,category) {
 
         setLoading(true)
         let url= `${baseurl}?page=${page}`
+        if(tag){
+            url =url+`&tag=${tag}`
+        }
+        if(category){
+            url=url+`&category=${category}`
+        }
        try {
         
         const response=await fetch(url);

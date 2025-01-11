@@ -3,24 +3,32 @@ import Blogs from "./Components/Blogs"
 import Header from "./Components/Header"
 import Pagination from "./Components/Pagination"
 import { AppContext } from "./Context/AppContext"
+import {Routes,Route} from 'react-router-dom'
 
 
-const App = () => {
 
-  const{getalldata}=useContext(AppContext);
-
+const App = () => {]
+  const{getalldata}=useContext(AppContext)
+ 
   useEffect(()=>{
+    
+     
 
-    getalldata();
+
+
   },[])
 
+
   return (
-    <div className="w-full h-full flex flex-col gap-y-2 justify-center items-center bg-[#FCFFC1]">
-    <Header/>
-      <Blogs/>
-      <Pagination/>
+    <div>
+      <Routes>
+        <Route path='/' element={<Home/>}/>
+        <Route path='/blog/:blogId' element={<BlogPage/>}/>
+        <Route path='/tags/:tag' element={<TagPage/>}/>
+        <Route path='/categories/:category' element={<CategoryPage/>}/>
+      </Routes>
     </div>
   )
 }
 
-export default App 
+export default App
